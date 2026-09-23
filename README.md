@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nocturna
+
+Experiencia frontend-only para comprar wallpapers digitales liberados a través de actividades de venta temporal.
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev
+```
+
+La demo usa actividades mock y guarda las compras en `localStorage`. El checkout muestra el flujo de Mercado Pago, pero no realiza un cobro real.
+
+## Integración real pendiente
+
+Para producción se necesita un backend o función serverless para crear preferencias de Mercado Pago, validar pagos mediante webhooks, almacenar compras y enviar el wallpaper por correo. La estructura de `src/data/activities.ts` y `src/lib/storage.ts` mantiene separada la UI para conectar esos servicios posteriormente.This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
