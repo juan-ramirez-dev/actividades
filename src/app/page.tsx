@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ChevronDown, Mail, Play, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Hash, Mail, Play, Sparkles } from "lucide-react";
 import { activities, formatPrice, formatQuantity, getActivityProgress } from "@/data/activities";
 
 function Header() {
@@ -26,9 +26,9 @@ export default function Home() {
         <div className="absolute right-[9%] top-[27%] hidden h-40 w-40 rounded-full border border-[#c9a34e]/50 lg:block" />
         <div className="relative max-w-4xl reveal">
           <p className="mb-7 flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-[#c9a34e]"><span className="h-px w-9 bg-[#c9a34e]" /> Archivo de actividades / 2026</p>
-          <h1 className="display max-w-4xl text-[clamp(4.8rem,13vw,11.5rem)] font-medium leading-[.76] tracking-[-0.05em] text-[#f2eee6]">Llévate<br /><em className="text-[#c9a34e]">el archivo.</em></h1>
+          <h1 className="display max-w-4xl text-[clamp(4.8rem,13vw,11.5rem)] font-medium leading-[.76] tracking-[-0.05em] text-[#f2eee6]">Lleva tu<br /><em className="text-[#c9a34e]">número.</em></h1>
           <div className="mt-12 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            <p className="max-w-xs text-sm leading-6 text-[#d6d0c5]">Wallpapers de colección, liberados por actividades de venta de tiempo limitado. Una imagen para quedarte con lo que ya no vuelve.</p>
+            <p className="max-w-xs text-sm leading-6 text-[#d6d0c5]">Cada wallpaper de colección trae un número oculto. Cada número corresponde a una actividad y a un premio propio.</p>
             <Link href="#activities" className="group flex w-fit items-center gap-4 border-b border-[#c9a34e] pb-3 text-[11px] uppercase tracking-[0.22em] text-[#f2eee6]">Ver actividades disponibles <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
       <section id="activities" className="px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
         <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div><p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-[#c9a34e]">El catálogo</p><h2 className="display text-5xl font-medium leading-none sm:text-7xl">Próximas <em className="text-[#c9a34e]">actividades.</em></h2></div>
-          <p className="max-w-xs text-sm leading-6 text-[#938d82]">Cada actividad libera un wallpaper exclusivo durante una ventana de tiempo limitada. Cuando termina, la edición se cierra.</p>
+          <p className="max-w-xs text-sm leading-6 text-[#938d82]">Cada actividad tiene su propio premio y su propio número. Consigue tu wallpaper antes de que cierre la ventana de tiempo.</p>
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
           {activities.filter((activity) => activity.status !== "ended").map((activity, index) => {
@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="border-y border-white/10 bg-[#e8e2d7] px-6 py-24 text-[#11100e] sm:px-10 sm:py-32 lg:px-16">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr] lg:items-end"><div><p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-[#887039]">El objeto</p><h2 className="display max-w-md text-6xl leading-[.85] sm:text-8xl">Un archivo,<br /><em>para siempre.</em></h2></div><div className="grid gap-10 sm:grid-cols-2"><div><Sparkles size={21} strokeWidth={1} className="mb-7 text-[#a6812e]" /><h3 className="mb-3 text-sm uppercase tracking-[0.18em]">Colecciones limitadas</h3><p className="text-sm leading-6 text-[#5f5a51]">Cada wallpaper pertenece a una actividad concreta y solo está disponible durante sus fechas.</p></div><div><Mail size={21} strokeWidth={1} className="mb-7 text-[#a6812e]" /><h3 className="mb-3 text-sm uppercase tracking-[0.18em]">Directo a tu correo</h3><p className="text-sm leading-6 text-[#5f5a51]">Después de comprar, recibirás el archivo en el correo que registres. En esta demo, tu compra queda guardada en el navegador.</p></div></div></div>
+        <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr] lg:items-end"><div><p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-[#887039]">El objeto</p><h2 className="display max-w-md text-6xl leading-[.85] sm:text-8xl">Un número,<br /><em>un premio.</em></h2></div><div className="grid gap-10 sm:grid-cols-3"><div><Hash size={21} strokeWidth={1} className="mb-7 text-[#a6812e]" /><h3 className="mb-3 text-sm uppercase tracking-[0.18em]">Tu número</h3><p className="text-sm leading-6 text-[#5f5a51]">Cada wallpaper trae un número propio, listo para asociarse al premio de su actividad.</p></div><div><Sparkles size={21} strokeWidth={1} className="mb-7 text-[#a6812e]" /><h3 className="mb-3 text-sm uppercase tracking-[0.18em]">Colecciones limitadas</h3><p className="text-sm leading-6 text-[#5f5a51]">Cada wallpaper pertenece a una actividad concreta y solo está disponible durante sus fechas.</p></div><div><Mail size={21} strokeWidth={1} className="mb-7 text-[#a6812e]" /><h3 className="mb-3 text-sm uppercase tracking-[0.18em]">Directo a tu correo</h3><p className="text-sm leading-6 text-[#5f5a51]">Después de comprar, recibirás el archivo en el correo que registres. En esta demo, tu compra queda guardada en el navegador.</p></div></div></div>
       </section>
 
       <section className="flex flex-col items-start justify-between gap-10 px-6 py-24 sm:flex-row sm:items-end sm:px-10 sm:py-28 lg:px-16"><div><p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-[#c9a34e]">Tu archivo personal</p><h2 className="display max-w-xl text-5xl leading-[.9] sm:text-7xl">¿Ya compraste<br /><em>una señal?</em></h2></div><Link href="/my-wallpapers" className="flex items-center gap-3 border border-[#c9a34e] px-5 py-4 text-[10px] uppercase tracking-[0.2em] transition hover:bg-[#c9a34e] hover:text-[#11100e]">Buscar mis wallpapers <Play size={13} fill="currentColor" /></Link></section>
