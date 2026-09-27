@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  redirects() {
+    return [{ source: "/my-wallpapers", destination: "/mis-fondos", permanent: true }];
+  },
 };
 
 export default nextConfig;
