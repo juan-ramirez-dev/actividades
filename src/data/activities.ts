@@ -27,8 +27,8 @@ export type WallpaperActivity = {
 
 export const activities: WallpaperActivity[] = [
   {
-    slug: "materia-01",
-    title: "Materia 01",
+    slug: "edicion-corolla",
+    title: "Edición Corolla",
     eyebrow: "Actividad 001",
     salePeriod: "22 SEP — 06 OCT · 2026",
     description:
@@ -56,8 +56,8 @@ export const activities: WallpaperActivity[] = [
     },
   },
   {
-    slug: "trama-azul",
-    title: "Trama Azul",
+    slug: "edicion-apartamento-norte",
+    title: "Edición Apartamento Norte",
     eyebrow: "Actividad 002",
     salePeriod: "07 OCT — 21 OCT · 2026",
     description:
@@ -85,8 +85,8 @@ export const activities: WallpaperActivity[] = [
     },
   },
   {
-    slug: "luz-minima",
-    title: "Luz Mínima",
+    slug: "edicion-terreno-mesitas",
+    title: "Edición Terreno Mesitas",
     eyebrow: "Actividad 003",
     salePeriod: "22 OCT — 05 NOV · 2026",
     description:
@@ -114,8 +114,8 @@ export const activities: WallpaperActivity[] = [
     },
   },
   {
-    slug: "forma-archivo",
-    title: "Forma Archivo",
+    slug: "edicion-sedan",
+    title: "Edición Sedán",
     eyebrow: "Actividad 004",
     salePeriod: "07 SEP — 21 SEP · 2026",
     description:

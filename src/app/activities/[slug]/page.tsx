@@ -28,7 +28,7 @@ export default async function ActivityPage({ params }: ActivityPageProps) {
         </div>
         <div className="flex flex-col justify-center px-6 py-14 sm:px-10 lg:px-16 lg:py-20">
           <p className="mb-5 text-[10px] uppercase tracking-[0.28em] text-[#c9a34e]">Vigencia · {activity.salePeriod}</p>
-          <h1 className="display max-w-xl text-7xl leading-[.8] sm:text-8xl">{activity.title}</h1>
+          <h1 className="display max-w-xl text-[clamp(3.25rem,13vw,6rem)] leading-[.85]">{activity.title}</h1>
           <p className="mt-9 max-w-md text-base leading-7 text-[#b7b0a5]">{activity.description}</p>
           <div className="my-10 grid gap-5 border-y border-white/10 py-6 text-[11px] uppercase tracking-[0.14em] text-[#d6d0c5] sm:grid-cols-2"><span className="flex items-center gap-3"><CalendarDays size={16} className="text-[#c9a34e]" /> {activity.salePeriod}</span><span className="flex items-center gap-3"><Images size={16} className="text-[#c9a34e]" /> {formatQuantity(wallpapersRemaining)} fondos de pantalla disponibles</span></div>
           <ul className="mb-10 space-y-3">{activity.details.map((detail) => <li key={detail} className="flex items-start gap-3 text-sm leading-6 text-[#d6d0c5]"><Check size={16} className="mt-1 shrink-0 text-[#c9a34e]" /> {detail}</li>)}</ul>
