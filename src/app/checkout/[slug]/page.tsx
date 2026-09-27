@@ -20,7 +20,7 @@ export default async function CheckoutPage({ params }: { params: Promise<{ slug:
           <div className="absolute bottom-7 left-6 right-6 sm:bottom-10 sm:left-10 sm:right-10"><p className="mb-2 text-[10px] uppercase tracking-[0.24em] text-[#c9a34e]">Último paso · Tu número va asociado a</p><p className="display text-4xl leading-[.9] text-[#f2eee6] sm:text-5xl">{activity.prize.name}</p></div>
         </div>
         <div className="flex flex-col justify-center border-t border-white/10 px-6 py-14 sm:px-10 lg:border-l lg:border-t-0 lg:px-16 lg:py-20">
-          <div className="mb-10 flex items-center gap-4 border-b border-white/10 pb-8"><div className="h-16 w-16 bg-cover bg-center" style={{ backgroundImage: `url(${activity.wallpaper})` }} /><div><p className="text-sm text-[#f2eee6]">{activity.title}</p><p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-[#938d82]">Fondo de pantalla digital · {formatPrice(activity.price)}</p></div></div>
+          <div className="mb-10 flex items-center gap-4 border-b border-white/10 pb-8"><div className="h-16 w-16 bg-cover bg-center" style={{ backgroundImage: `url(${activity.prize.image})` }} /><div><p className="text-sm text-[#f2eee6]">{activity.title}</p><p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-[#938d82]">Fondo de pantalla digital · {formatPrice(activity.price)}</p></div></div>
           <CheckoutForm activity={activity} />
         </div>
       </section>
