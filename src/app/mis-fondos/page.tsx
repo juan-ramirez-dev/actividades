@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowLeft, Mail } from "lucide-react";
+import { WallpaperLibrary } from "@/components/wallpaper-library";
+
+export default function MyFondosPage() {
+  return <main className="min-h-screen bg-[#11100e]"><header className="flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-10 lg:px-16"><Link href="/" className="flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-[#938d82] transition hover:text-[#c9a34e]"><ArrowLeft size={15} /> Volver al archivo</Link><Link href="/" className="display text-2xl tracking-[0.12em]">NOCTURNA<span className="text-[#c9a34e]">.</span></Link><span className="flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-[#938d82]"><Mail size={15} strokeWidth={1.5} /><span className="hidden sm:inline">Tu archivo</span></span></header><section className="mx-auto flex max-w-5xl flex-col items-center px-6 py-24 sm:px-10 sm:py-32"><p className="mb-5 text-[10px] uppercase tracking-[0.3em] text-[#c9a34e]">Biblioteca personal</p><h1 className="display text-center text-6xl leading-[.85] sm:text-8xl">Encuentra<br /><em>tus fondos.</em></h1><p className="mt-8 max-w-md text-center text-sm leading-6 text-[#938d82]">Busca con el correo que usaste al comprar. Tus fondos de pantalla aparecerán aquí y podrás abrirlos o descargarlos.</p><div className="mt-14 w-full"><WallpaperLibrary /></div></section></main>;
+}

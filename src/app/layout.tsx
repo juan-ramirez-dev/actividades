@@ -15,8 +15,8 @@ const display = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Nocturna — Wallpapers por actividades",
-  description: "Wallpapers de colección, liberados por actividades de venta de tiempo limitado.",
+  title: "Nocturna — Fondos de pantalla de colección",
+  description: "Fondos de pantalla de colección con número único, disponibles por actividades de edición limitada.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
